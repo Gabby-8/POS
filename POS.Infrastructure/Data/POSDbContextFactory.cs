@@ -23,7 +23,7 @@ namespace POS.Infrastructure.Data
             var optionsBuilder = new DbContextOptionsBuilder<POSDbContext>();
 
             optionsBuilder.UseSqlServer(
-                config.GetConnectionString("POS"));
+                config.GetConnectionString("DefaultConnection"));
 
             return new POSDbContext(optionsBuilder.Options);
         }
