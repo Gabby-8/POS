@@ -7,16 +7,11 @@ using POS.Infrastructure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
+//Register all services first before builder to prevent services to be read-only
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-
-
-
-
-var app = builder.Build();
 
 string? connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
@@ -29,8 +24,18 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 
 builder.Services.AddAuthorization();
 
-//Registering Services
 builder.Services.AddTransient<IAuthService, AuthService>();
+
+
+var app = builder.Build();
+
+
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    await POS.Infrastructure.Data.DbSeeder.SeedAsync(services);
+}
 
 app.UseDefaultFiles();
 app.MapStaticAssets();

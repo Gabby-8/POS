@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.Infrastructure", "POS.I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.Application", "POS.Application\POS.Application.csproj", "{32A404E3-7F2B-49E7-97DB-0D3E2727BCE3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.Shared", "POS.Shared\POS.Shared.csproj", "{EDA3C98D-3F23-4D32-B55D-DABE21232630}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{32A404E3-7F2B-49E7-97DB-0D3E2727BCE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32A404E3-7F2B-49E7-97DB-0D3E2727BCE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32A404E3-7F2B-49E7-97DB-0D3E2727BCE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDA3C98D-3F23-4D32-B55D-DABE21232630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDA3C98D-3F23-4D32-B55D-DABE21232630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDA3C98D-3F23-4D32-B55D-DABE21232630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDA3C98D-3F23-4D32-B55D-DABE21232630}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

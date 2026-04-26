@@ -12,7 +12,7 @@ using POS.Infrastructure.Data;
 namespace POS.Infrastructure.Migrations
 {
     [DbContext(typeof(POSDbContext))]
-    [Migration("20260423183829_InitialIdentity")]
+    [Migration("20260426101426_InitialIdentity")]
     partial class InitialIdentity
     {
         /// <inheritdoc />

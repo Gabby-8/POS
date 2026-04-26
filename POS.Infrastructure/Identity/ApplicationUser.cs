@@ -4,6 +4,5 @@ namespace POS.Infrastructure.Identity
 {
     public class ApplicationUser : IdentityUser
     {
-
     }
 }

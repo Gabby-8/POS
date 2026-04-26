@@ -27,6 +27,7 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="..\POS.Infrastructure\POS.Infrastructure.csproj" />
+    <ProjectReference Include="..\POS.Shared\POS.Shared.csproj" />
   </ItemGroup>
 
 </Project>
