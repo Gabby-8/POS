@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.37111.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "pos.client", "pos.client\pos.client.esproj", "{A02DC1B0-FD18-1564-E60B-B15564002BE1}"
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "POS.Client", "pos.client\POS.Client.esproj", "{A02DC1B0-FD18-1564-E60B-B15564002BE1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.Server", "POS.Server\POS.Server.csproj", "{42B36D0B-5D69-4B2D-96BF-E9BD43076599}"
 EndProject

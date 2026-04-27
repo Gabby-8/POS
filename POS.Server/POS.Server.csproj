@@ -7,6 +7,7 @@
     <SpaRoot>..\pos.client</SpaRoot>
     <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
     <SpaProxyServerUrl>https://localhost:54438</SpaProxyServerUrl>
+    <!--<UserSecretsId>950b18f0-c0c7-49c5-9e4a-792852dc9242</UserSecretsId>-->
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,7 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\POS.Application\POS.Application.csproj" />
-    <ProjectReference Include="..\pos.client\pos.client.esproj">
+    <ProjectReference Include="..\pos.client\POS.Client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="..\POS.Infrastructure\POS.Infrastructure.csproj" />

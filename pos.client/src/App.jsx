@@ -1,12 +1,26 @@
-import './App.css';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import PrivateRoute from "./routes/PrivateRoute";
 
 function App() {
-
     return (
-        <div>
-            <h1 id="tableLabel">Product List</h1>
-            <p>This component demonstrates fetching data from the server.</p>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Navigate to="/login" />} />
+
+                <Route path="/login" element={<Login />} />
+
+                <Route
+                    path="/dashboard"
+                    element={
+                        <PrivateRoute>
+                            <Dashboard />
+                        </PrivateRoute>
+                    }
+                />
+            </Routes>
+        </BrowserRouter>
     );
 }
 

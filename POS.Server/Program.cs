@@ -11,6 +11,7 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Configuration.AddUserSecrets<Program>();
 
 //Register all services first before builder to prevent services to be read-only
 
@@ -28,7 +29,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 
 builder.Services.AddAuthorization();
 
-builder.Services.AddTransient<IAuthService, AuthService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 var jwtSettings = builder.Configuration.GetSection("Jwt");
 var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
@@ -54,7 +55,7 @@ builder.Services.AddAuthentication(options =>
 
 var app = builder.Build();
 
-
+//Console.WriteLine("Conn: " + connectionString);
 
 using (var scope = app.Services.CreateScope())
 {
